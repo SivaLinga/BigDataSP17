@@ -4,13 +4,13 @@ import org.apache.spark.mllib.clustering.{KMeans, KMeansModel}
 import org.apache.spark.mllib.linalg.Vectors
 
 /**
-  * Created by Manikanta on 1/31/2017.
+  * Created by siva on 2/06/2017.
   */
 object kMeansClustering {
 
   def main(args: Array[String]): Unit = {
 
-    System.setProperty("hadoop.home.dir","C:\\Users\\Manikanta\\Documents\\UMKC Subjects\\PB\\hadoopforspark");
+//    System.setProperty("hadoop.home.dir","C:\\Users\\Manikanta\\Documents\\UMKC Subjects\\PB\\hadoopforspark");
 
     val sparkConf = new SparkConf().setAppName("SparkWordCount").setMaster("local[*]")
 
@@ -20,15 +20,15 @@ object kMeansClustering {
     Logger.getLogger("org").setLevel(Level.OFF);
     Logger.getLogger("akka").setLevel(Level.OFF);
     // Load and parse the data
-    val data = sc.textFile("data/kmeans_data.txt")
+    val data = sc.textFile("data/chimp.txt")
     val parsedData = data.map(s => Vectors.dense(s.split(' ').map(_.toDouble))).cache()
 
     //Look at how training data is!
     parsedData.foreach(f=>println(f))
 
     // Cluster the data into two classes using KMeans
-    val numClusters = 2
-    val numIterations = 20
+    val numClusters = 4
+    val numIterations = 100
     val clusters = KMeans.train(parsedData, numClusters, numIterations)
 
     // Evaluate clustering by computing Within Set Sum of Squared Errors

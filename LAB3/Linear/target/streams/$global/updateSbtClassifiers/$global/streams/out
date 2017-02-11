@@ -1,6 +1,7 @@
 [debug] Other repositories:
 [debug] Default repositories:
 [debug] Using inline dependencies specified in Scala.
+[debug] no default cache defined: set to /home/sivaramakrishna/.ivy2/cache
 [debug] :: resolving dependencies :: default#linear$sbt_2.11;1.0
 [debug] 	confs: [default]
 [debug] 	validate = true
@@ -164,7 +165,6 @@
 [info] Resolving org.scala-sbt#incremental-compiler;0.13.8 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#incremental-compiler;0.13.8 {compile=[default(compile)]}
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#incremental-compiler;0.13.8
-[debug] no default cache defined: set to /home/sivaramakrishna/.ivy2/cache
 [debug] 	found org.scala-sbt#incremental-compiler;0.13.8 in sbt-chain
 [debug] == resolving dependencies org.scala-sbt#incremental-compiler;0.13.8->org.scala-lang#scala-library;2.10.4 [compile->default(compile)]
 [debug] == resolving dependencies org.scala-sbt#incremental-compiler;0.13.8->org.scala-lang#scala-library;2.10.4 [compile->runtime]
@@ -704,9 +704,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.8!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar
-[debug] :: resolution report :: resolve 622ms :: artifacts dl 19ms
+[debug] :: resolution report :: resolve 4057ms :: artifacts dl 126ms
 [debug] 	report for default#linear$sbt_2.11;1.0 default produced in /home/sivaramakrishna/Desktop/BigDataSP17/BigDataSP17/LAB3/Linear/target/resolution-cache/reports/default-linear$sbt_2.11-default.xml
-[debug] 	resolve done (622ms resolve - 19ms download)
+[debug] 	resolve done (4057ms resolve - 126ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#linear$sources_2.11;1.0
 [debug] 	confs: [default]
@@ -1070,6 +1070,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.8!precompiled-2_8_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.8!precompiled-2_9_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.8!precompiled-2_9_3.jar(src)
-[debug] :: resolution report :: resolve 106ms :: artifacts dl 14ms
+[debug] :: resolution report :: resolve 461ms :: artifacts dl 59ms
 [debug] 	report for default#linear$sources_2.11;1.0 default produced in /home/sivaramakrishna/Desktop/BigDataSP17/BigDataSP17/LAB3/Linear/target/resolution-cache/reports/default-linear$sources_2.11-default.xml
-[debug] 	resolve done (106ms resolve - 14ms download)
+[debug] 	resolve done (461ms resolve - 59ms download)

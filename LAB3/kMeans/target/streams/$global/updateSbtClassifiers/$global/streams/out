@@ -10,7 +10,6 @@
 [debug] == resolving dependencies default#kmeans$sbt_2.11;1.0->org.scala-sbt#sbt;0.13.8 [default->default(compile)]
 [info] Resolving org.scala-sbt#sbt;0.13.8 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#sbt;0.13.8 {default=[default(compile)]}
-[debug] no default cache defined: set to C:\Users\Manikanta\.ivy2\cache
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#sbt;0.13.8
 [debug] 	found org.scala-sbt#sbt;0.13.8 in sbt-chain
 [debug] == resolving dependencies org.scala-sbt#sbt;0.13.8->org.scala-lang#scala-library;2.10.4 [compile->default(compile)]
@@ -108,6 +107,7 @@
 [debug] == resolving dependencies org.scala-sbt#io;0.13.8->org.scala-sbt#control;0.13.8 [compile->default(compile)]
 [info] Resolving org.scala-sbt#control;0.13.8 ...
 [debug] sbt-chain: Checking cache for: dependency: org.scala-sbt#control;0.13.8 {compile=[default(compile)]}
+[debug] no default cache defined: set to /home/sivaramakrishna/.ivy2/cache
 [debug] sbt-chain: module revision found in cache: org.scala-sbt#control;0.13.8
 [debug] 	found org.scala-sbt#control;0.13.8 in sbt-chain
 [debug] == resolving dependencies org.scala-sbt#control;0.13.8->org.scala-lang#scala-library;2.10.4 [compile->default(compile)]
@@ -704,9 +704,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-agent;0.13.8!test-agent.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8!apply-macro.jar
-[debug] :: resolution report :: resolve 1825ms :: artifacts dl 55ms
-[debug] 	report for default#kmeans$sbt_2.11;1.0 default produced in C:\Users\Manikanta\Documents\UMKC Subjects\GA\Tutorial3\kMeans\target\resolution-cache\reports\default-kmeans$sbt_2.11-default.xml
-[debug] 	resolve done (1825ms resolve - 55ms download)
+[debug] :: resolution report :: resolve 437ms :: artifacts dl 15ms
+[debug] 	report for default#kmeans$sbt_2.11;1.0 default produced in /home/sivaramakrishna/Desktop/BigDataSP17/BigDataSP17/LAB3/kMeans/target/resolution-cache/reports/default-kmeans$sbt_2.11-default.xml
+[debug] 	resolve done (437ms resolve - 15ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: default#kmeans$sources_2.11;1.0
 [debug] 	confs: [default]
@@ -1070,6 +1070,6 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_8_2;0.13.8!precompiled-2_8_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_2;0.13.8!precompiled-2_9_2.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#precompiled-2_9_3;0.13.8!precompiled-2_9_3.jar(src)
-[debug] :: resolution report :: resolve 205ms :: artifacts dl 56ms
-[debug] 	report for default#kmeans$sources_2.11;1.0 default produced in C:\Users\Manikanta\Documents\UMKC Subjects\GA\Tutorial3\kMeans\target\resolution-cache\reports\default-kmeans$sources_2.11-default.xml
-[debug] 	resolve done (205ms resolve - 56ms download)
+[debug] :: resolution report :: resolve 110ms :: artifacts dl 12ms
+[debug] 	report for default#kmeans$sources_2.11;1.0 default produced in /home/sivaramakrishna/Desktop/BigDataSP17/BigDataSP17/LAB3/kMeans/target/resolution-cache/reports/default-kmeans$sources_2.11-default.xml
+[debug] 	resolve done (110ms resolve - 12ms download)
