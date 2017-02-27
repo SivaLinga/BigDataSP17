@@ -20,7 +20,7 @@ import unfiltered.request._
 object SimplePlan extends Plan {
   def intent = {
     case req@GET(Path("/get")) => {
-      Ok ~> ResponseString(IPApp.testImage("data3/test/airplanes/image_0792.jpg"))
+      Ok ~> ResponseString(IPApp.testImage("data3/test/houses/1.jpg"))
     }
 
       case req@POST(Path("/get_custom")) => {
