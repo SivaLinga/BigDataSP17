@@ -1,14 +1,15 @@
-
 from __future__ import print_function
 import tensorflow as tf
 import numpy as np
-rng = np.random
+from sklearn.datasets import load_boston
+import pandas as pd
+import matplotlib.pyplot as plt
 
-trX = np.linspace(-1, 1, 101)
-
-# create a y value which is approximately linear but with some random noise
-
-trY = 2 * trX + 4+np.random.randn(*trX.shape) * 0.033
+rnd = np.random
+data = pandas.read_csv("boston.csv", header=0,delimiter=';')
+rnd_indices = 4000
+train_x = np.array(bos[5])
+train_y = np.array(boston.target)
 
 # create symbolic variables
 
@@ -25,15 +26,13 @@ b = tf.Variable(rng.randn(), name="bias")
 # prediction function
 y_model = tf.add(tf.multiply(X, w), b)
 
-
 # Mean squared error
 
-cost = tf.reduce_sum(tf.pow(y_model-Y, 2))/(2*100)
+cost = tf.reduce_sum(tf.pow(y_model-Y, 2))/(2*trX.shape[0])
 
 # construct an optimizer to minimize cost and fit line to my data
 
 train_op = tf.train.GradientDescentOptimizer(0.5).minimize(cost)
-
 
 # Launch the graph in a session
 sess = tf.Session()
@@ -42,24 +41,24 @@ sess = tf.Session()
 
 init = tf.global_variables_initializer()
 
-
 # you need to initialize variables
 sess.run(init)
 
 
-for i in range(100):
+for i in range(20):
     for (x, y) in zip(trX, trY):
         sess.run(train_op, feed_dict={X: x, Y: y})
 
 print("Optimization Finished!")
 training_cost = sess.run(cost, feed_dict={X: trX, Y: trY})
 
+print('--------------------------------------------------------------------------')
 print("Training cost=", training_cost, "W=", sess.run(w), "b=", sess.run(b), '\n')
 
 # Testing or Inference
 test_X = np.asarray([rng.randn(),rng.randn()])
-test_Y = 2*test_X + 4
-
+test_Y = sess.run(w)*test_X + sess.run(b)
+print('---------------------------------------------------------------------------')
 print("Testing... (Mean square loss Comparison)")
 
 testing_cost = sess.run(
@@ -68,3 +67,13 @@ testing_cost = sess.run(
 print("Testing cost=", testing_cost)
 print("Absolute mean square loss difference:", abs(
     training_cost - testing_cost))
+
+
+print('---------------------------------------------------------------------------------')
+
+plt.plot(trX, trY,'ro', label='Original data')
+plt.plot(trX, sess.run(w) * trX + sess.run(b), label='Fitted Line')
+plt.legend(loc='upper left')
+plt.ylabel('Price of House')
+plt.xlabel('Average number of rooms per dwelling')
+plt.show()
